@@ -4,9 +4,17 @@ function takeOrder(order, arr) {
 };
 }
 
+function refundOrder (orderNumber, arr) {
+  for(i = 0; i < arr.length; i++) {
+    if(arr[i].orderNumber == orderNumber)
+    arr.splice(i, 1);
+  }
+  return arr;
+};
+
 module.exports = {
   takeOrder,
-  // refundOrder,
+  refundOrder,
   // listItems,
   // searchOrder
 }
