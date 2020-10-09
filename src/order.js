@@ -25,11 +25,22 @@ function listItems(arr) {
   return listOfItems;
 }
 
+function searchOrder(arr, item) {
+  var itemPresent = '';
+
+  for(i = 0; i < arr.length; i++) {
+    if(arr[i].item == item) {
+      itemPresent = true;
+    }
+  }
+  return itemPresent;
+}
+
 //you've figured this one out but you need to make the returned string not have a comma or anything at the end
 
 module.exports = {
   takeOrder,
   refundOrder,
   listItems,
-  // searchOrder
+  searchOrder
 }
