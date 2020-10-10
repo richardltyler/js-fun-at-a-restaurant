@@ -1,8 +1,9 @@
 function takeOrder(order, arr) {
   if (arr.length < 3) {
   return arr.push(order);
+  }
 };
-}
+
 
 function refundOrder (orderNumber, arr) {
   for(i = 0; i < arr.length; i++) {
@@ -12,18 +13,20 @@ function refundOrder (orderNumber, arr) {
   return arr;
 };
 
+
 function listItems(arr) {
   var listOfItems = '';
 
   for(i = 0; i < arr.length; i++) {
     if(i < arr.length - 1) {
     listOfItems += `${arr[i].item}, `;
-  } else{
-    listOfItems += `${arr[i].item}`;
+    } else{
+      listOfItems += `${arr[i].item}`;
+    }
   }
-}
   return listOfItems;
-}
+};
+
 
 function searchOrder(arr, item) {
   var itemPresent = '';
@@ -34,9 +37,9 @@ function searchOrder(arr, item) {
     }
   }
   return itemPresent;
-}
+};
 
-//you've figured this one out but you need to make the returned string not have a comma or anything at the end
+
 
 module.exports = {
   takeOrder,
