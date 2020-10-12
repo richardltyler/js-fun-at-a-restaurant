@@ -11,21 +11,13 @@ function createMenuItem (menuItemName, menuItemPrice, menuItemType) {
   return menuItem;
 }
 
-var ingredients = [];
 
-function addIngredients(newIngredient, array) {
-  var duplicateIngredient = '';
+function addIngredients(newIngredient, listOfIngredients) {
 
-  for(i = 0; i <= array.length; i++) {
-    if(newIngredient === array[i]) {
-    duplicateIngredient += array[i];
+  for(i = 0; i <= listOfIngredients.length; i++) {
+    if(listOfIngredients.includes(newIngredient) === false) {
+      listOfIngredients.push(newIngredient);
     }
-  };
-  //figured out for loop will only make duplicateIngredient check whatever the last index is
-  // console.log('test if for loop is working:', duplicateIngredient);
-
-  if (duplicateIngredient == 0) {
-    array.push(newIngredient);
   }
 };
 
